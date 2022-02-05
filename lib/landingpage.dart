@@ -46,7 +46,7 @@ class _MainPageState extends State<MainPage> {
           centerTitle: true,
           title: const Text('Profile',
               style: TextStyle(
-                  color: Colors.black,
+                  color: Color(0XFE1C2833),
                   fontSize: 30,
                   fontWeight: FontWeight.bold)),
         ),
@@ -89,7 +89,7 @@ class _MainPageState extends State<MainPage> {
             Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
               ElevatedButton(
                 onPressed: () {
-                  log("Search", name: "Search Buttons");
+                  log("Statistics", name: "Statistics Buttons");
                 },
                 child: Image.asset('assets/stats.png'),
                 style: ElevatedButton.styleFrom(
@@ -99,22 +99,15 @@ class _MainPageState extends State<MainPage> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
               ),
+              const Text("Ishan Joshi",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color(0XFE0066ff),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold)),
               ElevatedButton(
                 onPressed: () {
-                  log("Profile Name", name: "Buttons");
-                },
-                child:
-                    const Text('Ishan Joshi', style: TextStyle(fontSize: 25.0)),
-                style: ElevatedButton.styleFrom(
-                    primary: const Color(0XFE212F3C),
-                    elevation: 3,
-                    fixedSize: const Size.fromHeight(50.0),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10))),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  log("Search", name: "Search Buttons");
+                  log("Licked", name: "like Buttons");
                 },
                 child: Image.asset('assets/like.png'),
                 style: ElevatedButton.styleFrom(
@@ -125,22 +118,18 @@ class _MainPageState extends State<MainPage> {
                         borderRadius: BorderRadius.circular(10))),
               ),
             ]),
+            const SizedBox(
+              height: 10,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    log("Search", name: "Search Buttons");
-                  },
-                  child: const Text("Professional don't know",
-                      style: TextStyle(fontSize: 20.0)),
-                  style: ElevatedButton.styleFrom(
-                      primary: const Color(0XFE566573),
-                      elevation: 3,
-                      fixedSize: const Size.fromHeight(40.0),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
-                ),
+              children: const [
+                Text("Professional ... dom't know",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Color(0XFE85C1E9),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold)),
               ],
             ),
 
@@ -164,7 +153,7 @@ class _MainPageState extends State<MainPage> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(fontSize: 16.0)),
                             style: ElevatedButton.styleFrom(
-                                primary: const Color(0XFE2C3E50),
+                                primary: const Color(0XFE0D505C),
                                 elevation: 3,
                                 fixedSize: const Size.square(110.0),
                                 shape: RoundedRectangleBorder(
@@ -178,7 +167,7 @@ class _MainPageState extends State<MainPage> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(fontSize: 16.0)),
                             style: ElevatedButton.styleFrom(
-                                primary: const Color(0XFE2C3E50),
+                                primary: const Color(0XFE0D505C),
                                 elevation: 3,
                                 fixedSize: const Size.square(110.0),
                                 shape: RoundedRectangleBorder(
@@ -192,7 +181,7 @@ class _MainPageState extends State<MainPage> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(fontSize: 16.0)),
                             style: ElevatedButton.styleFrom(
-                                primary: const Color(0XFE2C3E50),
+                                primary: const Color(0XFE0D505C),
                                 elevation: 3,
                                 fixedSize: const Size.square(110.0),
                                 shape: RoundedRectangleBorder(
@@ -214,6 +203,9 @@ class _MainPageState extends State<MainPage> {
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+                          const SizedBox(
+                            height: 15,
+                          ),
                           Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -299,10 +291,13 @@ class _MainPageState extends State<MainPage> {
                                             borderRadius:
                                                 BorderRadius.circular(10)))),
                               ]),
+                          const SizedBox(
+                            height: 15,
+                          ),
                         ]),
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/bg.jpg"),
+                        image: AssetImage("assets/background.jpg"),
                         fit: BoxFit.cover,
                       ),
                     ))),
@@ -358,70 +353,21 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ),
-            const Text('All Bout me'),
+            const SizedBox(
+              height: 30,
+            ),
+            const Text('All About me',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold)),
+            const SizedBox(
+              height: 30,
+            ),
           ],
         ),
+        backgroundColor: Colors.black,
         drawer: Drawer());
   }
 }
-
-// void _launchURL() async {
-//   if (!await launch('www.google.com')) ;
-//   // throw 'Could not launch $_www.google.com';
-// }
-
-// actions: <Widget>[
-// Container(
-//     child: Row(
-//       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//       children: [
-//         const SizedBox(
-//           width: 2.0,
-//         ),
-//         // ElevatedButton(
-//         //   onPressed: () {
-//         //     log("list", name: "List Button");
-//         //   },
-//         //   child: Image.asset("assets/list.png"),
-//         //   style: ElevatedButton.styleFrom(
-//         //       primary: const Color(0XFEE5E7E9),
-//         //       elevation: 2,
-//         //       fixedSize: const Size.square(40.0),
-//         //       shape: RoundedRectangleBorder(
-//         //           borderRadius: BorderRadius.circular(15))),
-//         // ),
-//         // const SizedBox(
-//         //   width: 70.0,
-//         // ),
-//         // ElevatedButton(
-//         //   onPressed: () {
-//         //     log("Profile", name: "Profile Buttons");
-//         //   },
-//         //   child: const Text('Profile',
-//         //       style: TextStyle(fontSize: 30.0, color: Colors.black)),
-//         //   style: ElevatedButton.styleFrom(
-//         //       // primary: ,
-//         //       elevation: 0,
-//         //       fixedSize: const Size.fromHeight(58.0),
-//         //       shape: RoundedRectangleBorder(
-//         //           borderRadius: BorderRadius.circular(13))),
-//         // ),
-
-//         // ElevatedButton(
-//         //   onPressed: () async {
-//         //     if (!await launch(_url7)) throw 'Could not launch $_url7';
-//         //   },
-//         //   child: Image.asset("assets/explore.png"),
-//         //   style: ElevatedButton.styleFrom(
-//         //       primary: const Color(0XFEE5E7E9),
-//         //       elevation: 2,
-//         //       fixedSize: const Size.square(40.0),
-//         //       shape: RoundedRectangleBorder(
-//         //           borderRadius: BorderRadius.circular(15))),
-//         // ),
-//         const SizedBox(
-//           width: 2.0,
-//         ),
-//       ],
-//     ),
-//     color: Colors.lightBlue[700]),
